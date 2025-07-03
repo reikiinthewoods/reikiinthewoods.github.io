@@ -23,7 +23,7 @@ body {
   margin: 0;
   font-family: "urbanist";
   color: var(--reiki-brown);
-  overscroll-behavior: none;
+  /* overscroll-behavior: none; */
 }
 #root {
   display: flex;
