@@ -18,6 +18,8 @@
 }
 html,
 body {
+  display: flex;
+  justify-content: center;
   margin: 0;
   font-family: "urbanist";
   color: var(--reiki-brown);
