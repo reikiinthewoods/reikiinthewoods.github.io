@@ -32,6 +32,7 @@ body {
   background: var(--offwhite);
   gap: 15px;
   padding: 15px;
+  width: 100%;
 }
 #root > * {
   border: 1px solid var(--reiki-blue);
@@ -47,6 +48,9 @@ body {
 #banner {
   width: initial;
   position: initial;
+  background-color: transparent;
+  white-space: nowrap;
+  text-shadow: 0 0 5px var(--reiki-blue);
 }
 #banner-wrapper {
   display: flex;
@@ -56,7 +60,7 @@ body {
   background-color: var(--reiki-blue);
 }
 #banner-logo {
-  z-index: 2;
+  z-index: 0.5;
   position: absolute;
   right: 2%;
   height: 70px;
@@ -101,6 +105,9 @@ body {
 #bio > * {
   margin: 0;
 }
+#bio h1 {
+  text-align: center;
+}
 #bio-services {
   margin: 0 30px 0 30px;
   padding-left: 0;
@@ -108,6 +115,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   column-gap: 30px;
+  text-align: center;
 }
 #bio-services li {
   font-size: 20px;
@@ -115,14 +123,25 @@ body {
 #spotlight {
   display: flex;
   justify-content: center;
-  column-gap: 5%;
+  align-items: center;
+  column-gap: 10%;
+  row-gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+#description {
+  text-align: center;
+  /* flex: 1 0.25 var(--slideshow-img-width); */
+  max-width: 500px;
+  letter-spacing: 0.25px;
+  margin: 0;
+  font-size: 1.2em;
 }
 #slideshow {
   display: flex;
   position: relative;
   align-items: center;
   justify-content: center;
-  padding: 20px;
 }
 #image-wrapper {
   width: var(--slideshow-img-width);
@@ -179,16 +198,6 @@ body {
   flex: 1;
   border-radius: 50%;
   box-shadow: 0 0 5px var(--offblack);
-}
-#description {
-  display: flex;
-  align-items: center;
-  max-width: 25%;
-  min-width: var(--slideshow-img-width);
-}
-#description p {
-  text-align: center;
-  margin: 30px;
 }
 #guide {
   padding: 10px;
