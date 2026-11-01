@@ -47,20 +47,6 @@ export default function Slideshow(Props) {
             onClick={() => changeIndex({ change: "increment" })}
             alt=""
           />
-          <div id="slideshow-dots">
-            {images.map((_, index) => {
-              return (
-                <div
-                  key={index}
-                  className="slideshow-dot"
-                  style={{
-                    backgroundColor:
-                      index == imgArrayIndex ? "var(--offwhite)" : "gray",
-                  }}
-                ></div>
-              );
-            })}
-          </div>
         </div>
         <img className="content-photo" src={images[imgArrayIndex]}></img>
       </div>
