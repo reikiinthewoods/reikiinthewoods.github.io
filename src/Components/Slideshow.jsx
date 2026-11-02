@@ -21,13 +21,7 @@ export default function Slideshow(Props) {
   };
   useEffect(() => {
     clearIntervals();
-    slideShowRef.current.push(
-      setInterval(() => {
-        let nextIndex = imgArrayIndex + 1;
-        nextIndex %= images.length;
-        setImgArrayIndex(nextIndex);
-      }, 5000)
-    );
+    slideShowRef.current.push(setInterval(() => setImgArrayIndex((imgArrayIndex + 1) % images.length), 5000));
   }, [imgArrayIndex, images.length]);
   return (
     <div id="slideshow">
