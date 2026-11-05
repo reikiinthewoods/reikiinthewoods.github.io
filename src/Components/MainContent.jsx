@@ -2,6 +2,7 @@ import Bio from "./Bio";
 import Slideshow from "./Slideshow";
 import Description from "./Description";
 import Guide from "./Guide";
+import bio from "../assets/text/bio.txt?raw";
 export default function MainContent(Props) {
   const { images } = Props;
   return (
@@ -9,6 +10,7 @@ export default function MainContent(Props) {
       <div id="service-info-content">
         <h2>Book your next mindfulness experience</h2>
         <Bio />
+        <div><p>{bio}</p></div>
         <div id="spotlight">
           <Slideshow images={images} />
           <Description />
